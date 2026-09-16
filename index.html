@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&amp;family=Outfit:wght@400;600;700&amp;family=Sora:wght@600;700;800&amp;display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <style>
+        @layer base {
+
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                overscroll-behavior: none;
+            }
+
+            main>:first-child {
+                margin-top: 0 !important;
+            }
+
+            main>:last-child {
+                margin-bottom: 0 !important;
+            }
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+        id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-bright": "#443638", "on-tertiary-fixed": "#002113", "on-tertiary-fixed-variant": "#005236", "tertiary-container": "#30c88f", "on-primary-fixed": "#2a1700", "surface-tint": "#ffb95f", "on-tertiary-container": "#004e34", "outline": "#a08e7a", "primary": "#ffc174", "error-container": "#93000a", "surface-variant": "#3f3134", "surface-container-highest": "#3f3134", "secondary-fixed": "#ffdadb", "inverse-surface": "#f3dde0", "surface-container": "#281c1f", "surface-container-low": "#24181b", "surface-dim": "#1b1013", "on-secondary-fixed": "#340f14", "on-secondary": "#4d2428", "background": "#1b1013", "primary-container": "#f59e0b", "tertiary-fixed-dim": "#4edea3", "secondary-container": "#68393e", "on-secondary-container": "#e4a5a9", "on-error-container": "#ffdad6", "secondary": "#f7b6ba", "on-surface": "#f3dde0", "on-surface-variant": "#d8c3ad", "on-primary-fixed-variant": "#653e00", "primary-fixed-dim": "#ffb95f", "surface": "#1b1013", "on-secondary-fixed-variant": "#68393e", "error": "#ffb4ab", "on-error": "#690005", "outline-variant": "#534434", "on-primary-container": "#613b00", "inverse-primary": "#855300", "tertiary": "#56e5a9", "on-primary": "#472a00", "tertiary-fixed": "#6ffbbe", "surface-container-lowest": "#160b0d", "inverse-on-surface": "#3a2d2f", "surface-container-high": "#342729", "on-tertiary": "#003824", "secondary-fixed-dim": "#f7b6ba", "on-background": "#f3dde0", "primary-fixed": "#ffddb8" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xl": "2.5rem", "gutter": "1rem", "space-md": "1rem", "space-sm": "0.5rem", "margin": "2rem", "margin-mobile": "1rem", "gutter-mobile": "0.75rem", "space-lg": "1.5rem", "space-xs": "0.25rem" }, "fontFamily": { "body-md": ["Outfit"], "label-caps": ["Outfit"], "headline-md": ["Sora"], "headline-lg-mobile": ["Sora"], "body-sm": ["Outfit"], "body-lg": ["Outfit"], "label-number-md": ["JetBrains Mono"], "headline-lg": ["Sora"], "label-number-xl": ["JetBrains Mono"], "headline-xl": ["Sora"], "headline-xl-mobile": ["Sora"] }, "fontSize": { "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "label-caps": ["11px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "700" }], "headline-md": ["20px", { "lineHeight": "26px", "fontWeight": "600" }], "headline-lg-mobile": ["22px", { "lineHeight": "28px", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "label-number-md": ["18px", { "lineHeight": "22px", "letterSpacing": "0.02em", "fontWeight": "700" }], "headline-lg": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "label-number-xl": ["32px", { "lineHeight": "36px", "letterSpacing": "0.02em", "fontWeight": "700" }], "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "headline-xl-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "800" }] } } } }</script>
+</head>
+
+<body class="bg-background font-body-md text-body-md text-on-surface antialiased">
+    <header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_4px_20px_rgba(0,0,0,0.5)]">
+        <div class="h-28 max-w-[1200px] mx-auto px-gutter-mobile md:px-margin flex flex-col justify-between">
+            <div class="h-16 flex items-center justify-between gap-space-md">
+                <div class="flex items-center gap-space-sm"><img alt="New Kolkata Fatafat Logo"
+                        class="h-8 w-auto object-contain"
+                        src="https://lh3.googleusercontent.com/aida/AEtjO1Urt889dUacf0JdWAueNYKnySY3inaz0oDabyp5JtUY4B9Oeqfpy7EIRZ6JNPCV095-FsXksbBTOqgpdvoNgOUSTR012bR5XcyeyOerSYoQB3yffYjs0c2Ps5rVgFIqoYJGPFZwkqhr8s9-NUtY6wB3H39JMTF34su2Lz4rPL-nWcU3w73IBI2VZU_SpQRGqwSuxDeCt1s5WwFeypxa4oYKMYtJd08hSLTzSwWlWMyFYzy3HJKer4J32MQ">
+                    <div class="flex flex-col"><span
+                            class="font-headline-md text-headline-md text-primary tracking-tight">Kolkata
+                            Fatafat</span><span
+                            class="font-label-caps text-label-caps text-tertiary uppercase flex items-center gap-1"><span
+                                class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>Official Portal</span>
+                    </div>
+                </div>
+                <nav class="hidden xl:flex items-center gap-space-md"
+                    data-active-classes="bg-surface-container-highest text-primary font-bold rounded-lg"><a
+                        aria-current="page"
+                        class="transition-colors px-2 py-1 bg-surface-container-highest text-primary font-bold rounded-lg"
+                        data-path="today-live-games" href="#">Today Live Games</a><a
+                        class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors px-2 py-1"
+                        data-path="baji-results-chart" href="#">Baji Results Chart</a><a
+                        class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors px-2 py-1"
+                        data-path="date-wise-history" href="#">Date-Wise History</a><a
+                        class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors px-2 py-1"
+                        data-path="game-timetable" href="#">Game Timetable</a><a
+                        class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors px-2 py-1"
+                        data-path="tips-patti-chart" href="#">Tips &amp; Patti Chart</a></nav>
+                <div class="flex items-center gap-space-sm">
+                    <div
+                        class="hidden md:flex items-center gap-space-xs bg-surface-container-low px-space-sm py-1 rounded-lg">
+                        <span class="w-2 h-2 rounded-full bg-tertiary animate-ping"></span><span
+                            class="font-label-caps text-label-caps text-tertiary uppercase">Auto Refresh: ON
+                            5s</span><button class="text-on-surface-variant hover:text-primary transition-colors ml-1"
+                            title="Manual Refresh" type="button"><span
+                                class="material-symbols-outlined text-[16px] leading-none align-middle">sync</span></button>
+                    </div>
+                    <div class="hidden lg:flex flex-col text-right"><span
+                            class="font-label-caps text-label-caps text-on-surface-variant">Kolkata Time
+                            (IST)</span><span
+                            class="font-label-number-md text-label-number-md text-on-surface">15:42:08</span></div>
+                    <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span
+                            class="material-symbols-outlined text-on-primary text-[18px]">person</span></div>
+                </div>
+            </div>
+            <div
+                class="h-12 flex items-center justify-between gap-space-sm bg-surface-container-lowest/80 rounded-lg px-space-sm mb-1 overflow-hidden">
+                <div class="flex items-center gap-space-sm overflow-hidden flex-1"><span
+                        class="font-label-caps text-label-caps bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded uppercase shrink-0">Flash
+                        Live</span>
+                    <div
+                        class="overflow-x-auto whitespace-nowrap scrollbar-none text-body-sm font-label-number-md text-on-surface flex items-center gap-space-md">
+                        <span class="text-primary">Baji 1: <strong class="text-on-surface">345 - 2</strong></span><span
+                            class="text-outline-variant">|</span><span class="text-primary">Baji 2: <strong
+                                class="text-on-surface">128 - 1</strong></span><span
+                            class="text-outline-variant">|</span><span class="text-primary">Baji 3: <strong
+                                class="text-on-surface">567 - 8</strong></span><span
+                            class="text-outline-variant">|</span><span
+                            class="text-tertiary flex items-center gap-1 font-body-sm"><span
+                                class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>Next Baji 4 in
+                            03:42</span></div>
+                </div>
+                <div class="hidden sm:flex items-center gap-1 shrink-0"><a
+                        class="bg-surface-container-high text-primary px-space-xs py-1 rounded text-body-sm font-bold"
+                        data-path="today-live-games" href="#">Today (Live)</a><a
+                        class="text-on-surface-variant hover:text-on-surface px-space-xs py-1 rounded text-body-sm"
+                        data-path="date-wise-history" href="#">Yesterday</a><a
+                        class="text-on-surface-variant hover:text-on-surface px-space-xs py-1 rounded text-body-sm"
+                        data-path="date-wise-history" href="#">Past 7 Days</a><button
+                        class="flex items-center gap-1 text-on-surface-variant hover:text-primary px-space-xs py-1 rounded text-body-sm"
+                        type="button"><span
+                            class="material-symbols-outlined text-[16px]">calendar_month</span>Date</button></div>
+            </div>
+        </div>
+    </header>
+    <main class="w-full pt-28 bg-background max-w-[1200px] mx-auto px-gutter-mobile md:px-margin">
+        <div class="flex flex-col w-full">
+            <!-- Top Realtime Notification & Live Refresh Ticker -->
+            <section class="w-full mb-space-lg">
+                <div class="relative overflow-hidden rounded-xl bg-surface-container-lowest p-space-sm shadow-xl">
+                    <div
+                        class="absolute -right-24 -top-24 w-80 h-80 rounded-full bg-primary/5 blur-3xl pointer-events-none">
+                    </div>
+                    <div class="flex flex-col lg:flex-row items-center justify-between gap-space-md">
+                        <!-- Live Status + Countdown Ring -->
+                        <div class="flex items-center gap-space-md w-full lg:w-auto">
+                            <div class="relative flex items-center justify-center w-12 h-12 shrink-0">
+                                <svg class="w-12 h-12 transform -rotate-90" viewBox="0 0 48 48">
+                                    <circle class="text-surface-variant fill-none" cx="24" cy="24" r="20"
+                                        stroke="currentColor" stroke-width="3"></circle>
+                                    <circle class="text-primary fill-none transition-all duration-1000 ease-linear"
+                                        cx="24" cy="24" id="refreshRing" r="20" stroke="currentColor"
+                                        stroke-dasharray="125.6" stroke-dashoffset="0" stroke-width="3.5"
+                                        style="stroke-dashoffset: 75.3982;"></circle>
+                                </svg>
+                                <span class="absolute font-label-number-md text-label-number-md text-primary font-bold"
+                                    id="countdownSec">2s</span>
+                            </div>
+                            <div class="flex flex-col min-w-0">
+                                <div class="flex items-center gap-2">
+                                    <span class="relative flex h-2.5 w-2.5">
+                                        <span
+                                            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span>
+                                        <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-tertiary"></span>
+                                    </span>
+                                    <span
+                                        class="font-label-caps text-label-caps uppercase tracking-wider text-tertiary">Direct
+                                        WebSocket Synced</span>
+                                    <span class="font-body-sm text-body-sm text-outline hidden sm:inline">• Kolkata-East
+                                        Datacenter #03</span>
+                                </div>
+                                <p class="font-body-md text-body-md text-on-surface">Auto-refresh stream active. Next
+                                    sync in <span class="font-label-number-md text-primary font-bold"
+                                        id="tickerNum">2</span>s</p>
+                            </div>
+                            <button
+                                class="ml-auto lg:ml-space-sm flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface hover:text-primary transition-all active:scale-95 shadow-sm shrink-0"
+                                id="manualSyncBtn" type="button">
+                                <span class="material-symbols-outlined text-[18px]" id="syncIcon">sync</span>
+                                <span class="font-label-caps text-label-caps uppercase">Sync Now</span>
+                            </button>
+                        </div>
+                        <!-- Date-Wise Quick Filters & Date Picker -->
+                        <div
+                            class="flex flex-wrap items-center gap-space-xs w-full lg:w-auto justify-start lg:justify-end">
+                            <div
+                                class="flex items-center bg-surface-container-low p-1 rounded-lg overflow-x-auto max-w-full">
+                                <button
+                                    class="px-space-sm py-1 rounded bg-primary-container text-on-primary-container font-label-caps text-label-caps uppercase font-bold shadow-md">Today
+                                    (Live)</button>
+                                <button
+                                    class="px-space-sm py-1 rounded text-on-surface-variant hover:text-on-surface font-label-caps text-label-caps uppercase">Yesterday
+                                    (14 May)</button>
+                                <button
+                                    class="px-space-sm py-1 rounded text-on-surface-variant hover:text-on-surface font-label-caps text-label-caps uppercase">13
+                                    May</button>
+                                <button
+                                    class="px-space-sm py-1 rounded text-on-surface-variant hover:text-on-surface font-label-caps text-label-caps uppercase">12
+                                    May</button>
+                            </div>
+                            <div class="flex items-center gap-1.5 bg-surface-container-low px-space-sm py-1 rounded-lg">
+                                <span class="material-symbols-outlined text-outline text-[18px]">calendar_today</span>
+                                <input
+                                    class="bg-transparent text-on-surface font-label-number-md text-body-sm focus:outline-none [color-scheme:dark]"
+                                    type="date" value="2025-05-15">
+                                <button
+                                    class="px-2 py-1 rounded bg-surface-container-high text-primary hover:bg-primary hover:text-on-primary font-label-caps text-label-caps uppercase transition-colors"
+                                    type="button">Go</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Hero Spotlight: Latest Declared Result & Next Round Broadcast -->
+            <section class="w-full mb-space-xl">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+                    <!-- Primary Live Result Card (8 Cols) -->
+                    <div
+                        class="lg:col-span-8 relative overflow-hidden rounded-xl bg-gradient-to-br from-surface-container via-surface-container-low to-surface-container-lowest p-space-lg shadow-2xl">
+                        <div
+                            class="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-primary/10 blur-3xl pointer-events-none">
+                        </div>
+                        <div
+                            class="absolute bottom-0 right-0 w-64 h-64 rounded-full bg-secondary/5 blur-2xl pointer-events-none">
+                        </div>
+                        <div class="relative z-10 flex flex-col justify-between h-full space-y-space-md">
+                            <!-- Card Header & Badge -->
+                            <div class="flex flex-wrap items-center justify-between gap-space-sm">
+                                <div class="flex items-center gap-space-xs">
+                                    <span
+                                        class="px-space-sm py-1 rounded-full bg-primary-container/20 text-primary font-label-caps text-label-caps uppercase flex items-center gap-1.5">
+                                        <span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+                                        Official Verified Result
+                                    </span>
+                                    <span class="text-outline font-label-caps text-label-caps uppercase">Slot: Baji 4
+                                        (03:00 PM)</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span
+                                        class="font-body-sm text-body-sm text-tertiary bg-tertiary/10 px-space-sm py-0.5 rounded-full flex items-center gap-1">
+                                        <span class="material-symbols-outlined text-[14px]">check_circle</span>
+                                        Declared at 03:00:14 PM IST
+                                    </span>
+                                </div>
+                            </div>
+                            <!-- Main Result Showcase: Golden Monospace Digits -->
+                            <div class="py-space-md my-auto">
+                                <div class="text-center sm:text-left mb-space-sm">
+                                    <span
+                                        class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant">Round
+                                        4 Grand Outcome</span>
+                                    <h2
+                                        class="font-headline-xl text-headline-xl text-primary drop-shadow-[0_2px_18px_rgba(245,158,11,0.35)]">
+                                        579 — 1</h2>
+                                </div>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md pt-space-sm">
+                                    <!-- Patti / Pana Box -->
+                                    <div
+                                        class="relative group overflow-hidden rounded-xl bg-surface-container-high/60 p-space-md shadow-lg flex items-center justify-between">
+                                        <div class="flex flex-col">
+                                            <span
+                                                class="font-label-caps text-label-caps uppercase text-on-surface-variant">Triple
+                                                / Patti (Pana)</span>
+                                            <span
+                                                class="font-headline-md text-headline-md text-on-surface mt-1">579</span>
+                                            <span class="font-body-sm text-body-sm text-outline">Sum: 5+7+9 = 21</span>
+                                        </div>
+                                        <div
+                                            class="w-14 h-14 rounded-xl bg-surface-variant flex items-center justify-center text-primary shadow-inner">
+                                            <span class="material-symbols-outlined text-[28px]">casino</span>
+                                        </div>
+                                    </div>
+                                    <!-- Single / Haruf Box -->
+                                    <div
+                                        class="relative group overflow-hidden rounded-xl bg-surface-container-high/60 p-space-md shadow-lg flex items-center justify-between">
+                                        <div class="flex flex-col">
+                                            <span
+                                                class="font-label-caps text-label-caps uppercase text-on-surface-variant">Single
+                                                Digit (Haruf)</span>
+                                            <span
+                                                class="font-headline-md text-headline-md text-primary mt-1 font-bold">1</span>
+                                            <span class="font-body-sm text-body-sm text-tertiary">Last Digit
+                                                Winner</span>
+                                        </div>
+                                        <div
+                                            class="w-14 h-14 rounded-xl bg-primary-container text-on-primary-container font-headline-md text-headline-md font-extrabold flex items-center justify-center shadow-lg">
+                                            1
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Quick Share & Social Verification -->
+                            <div class="pt-space-sm flex flex-wrap items-center justify-between gap-space-sm">
+                                <div class="flex items-center gap-space-sm">
+                                    <button
+                                        class="flex items-center gap-1.5 px-space-md py-1.5 rounded-lg bg-surface-variant hover:bg-surface-bright text-on-surface text-body-sm transition-colors"
+                                        type="button">
+                                        <span class="material-symbols-outlined text-[16px]">share</span>
+                                        <span class="">Share Result</span>
+                                    </button>
+                                    <button
+                                        class="flex items-center gap-1.5 px-space-md py-1.5 rounded-lg bg-surface-variant hover:bg-surface-bright text-on-surface text-body-sm transition-colors"
+                                        type="button">
+                                        <span class="material-symbols-outlined text-[16px]">content_copy</span>
+                                        <span class="">Copy 579-1</span>
+                                    </button>
+                                </div>
+                                <span class="font-body-sm text-body-sm text-outline">Ref ID: #KOL-20250515-B4</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Next Game Live Countdown & Live Action Card (4 Cols) -->
+                    <div
+                        class="lg:col-span-4 relative overflow-hidden rounded-xl bg-surface-container p-space-lg flex flex-col justify-between shadow-2xl">
+                        <div
+                            class="absolute -right-20 -bottom-20 w-48 h-48 rounded-full bg-secondary-container/30 blur-2xl pointer-events-none">
+                        </div>
+                        <div>
+                            <!-- Header -->
+                            <div class="flex items-center justify-between mb-space-md">
+                                <span
+                                    class="px-2.5 py-1 rounded-md bg-secondary-container text-on-secondary-container font-label-caps text-label-caps uppercase font-bold flex items-center gap-1.5">
+                                    <span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span>
+                                    Imminent Round
+                                </span>
+                                <span class="font-label-number-md text-body-sm text-primary font-bold">5th Baji</span>
+                            </div>
+                            <div class="mb-space-md">
+                                <h3 class="font-headline-md text-headline-md text-on-surface">5th Baji Drawing Soon</h3>
+                                <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Official declaration
+                                    scheduled for 04:30 PM IST sharp.</p>
+                            </div>
+                            <!-- Dynamic Timer Badge Box -->
+                            <div
+                                class="bg-surface-container-lowest p-space-md rounded-xl text-center shadow-inner my-space-md">
+                                <span class="font-label-caps text-label-caps uppercase text-outline">Releasing In</span>
+                                <div class="flex items-center justify-center gap-2 mt-1">
+                                    <div class="flex flex-col items-center">
+                                        <span
+                                            class="font-label-number-xl text-label-number-xl text-primary font-extrabold tracking-wider"
+                                            id="timerMin">12</span>
+                                        <span class="font-label-caps text-[9px] uppercase text-outline">Minutes</span>
+                                    </div>
+                                    <span class="font-label-number-xl text-label-number-xl text-primary -mt-3">:</span>
+                                    <div class="flex flex-col items-center">
+                                        <span
+                                            class="font-label-number-xl text-label-number-xl text-primary font-extrabold tracking-wider"
+                                            id="timerSec">35</span>
+                                        <span class="font-label-caps text-[9px] uppercase text-outline">Seconds</span>
+                                    </div>
+                                </div>
+                                <div
+                                    class="w-full bg-surface-container-high h-1.5 rounded-full mt-space-sm overflow-hidden">
+                                    <div class="bg-primary h-full w-3/4 rounded-full transition-all duration-1000">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Game Details Specs -->
+                            <div class="space-y-2 text-body-sm">
+                                <div class="flex justify-between text-on-surface-variant">
+                                    <span class="">Betting Window Closes:</span>
+                                    <span class="font-label-number-md text-on-surface font-semibold">04:25 PM</span>
+                                </div>
+                                <div class="flex justify-between text-on-surface-variant">
+                                    <span class="">Server Synchronization:</span>
+                                    <span class="text-tertiary font-medium">Synced (0ms Delay)</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Call to Action / Notifications -->
+                        <div class="pt-space-md mt-space-md">
+                            <button
+                                class="w-full py-2.5 rounded-lg bg-primary hover:bg-primary-fixed text-on-primary font-headline-md text-body-sm font-bold shadow-lg transition-all flex items-center justify-center gap-2 active:scale-95"
+                                type="button">
+                                <span class="material-symbols-outlined text-[18px]">notifications_active</span>
+                                Get Baji 5 Live Notification
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Today's Complete 8-Baji Scorecard Matrix -->
+            <section class="w-full mb-space-xl">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-space-md gap-space-sm">
+                    <div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-3 h-3 rounded-sm bg-primary rotate-45"></span>
+                            <span
+                                class="font-label-caps text-label-caps uppercase tracking-wider text-primary">Comprehensive
+                                Daily Board</span>
+                        </div>
+                        <h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight mt-1">Today's All
+                            Games &amp; Results (1st to 8th Baji)</h2>
+                    </div>
+                    <div class="flex items-center gap-space-sm self-start md:self-auto">
+                        <div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface-variant">
+                            <span class="inline-flex items-center gap-1"><span
+                                    class="w-2 h-2 rounded-full bg-tertiary"></span> Declared</span>
+                            <span class="inline-flex items-center gap-1"><span
+                                    class="w-2 h-2 rounded-full bg-primary"></span> Live/Countdown</span>
+                            <span class="inline-flex items-center gap-1"><span
+                                    class="w-2 h-2 rounded-full bg-surface-bright"></span> Upcoming</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 8 Rounds Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+                    <!-- Baji 1: Declared -->
+                    <div
+                        class="relative overflow-hidden rounded-xl bg-surface-container-lowest p-space-md shadow-lg transition-all hover:-translate-y-1">
+                        <div class="flex items-center justify-between mb-space-sm">
+                            <span
+                                class="font-label-caps text-label-caps uppercase text-on-surface-variant font-bold">1st
+                                Baji</span>
+                            <span
+                                class="px-2 py-0.5 rounded-full bg-tertiary/10 text-tertiary font-label-caps text-[10px] uppercase font-bold flex items-center gap-1">
+                                <span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Declared
+                            </span>
+                        </div>
+                        <div class="text-body-sm text-outline mb-space-xs font-label-number-md">10:30 AM IST</div>
+                        <div
+                            class="my-space-md flex items-center justify-between bg-surface-container-low p-space-sm rounded-lg">
+                            <div>
+                                <div class="font-label-caps text-[10px] uppercase text-outline">Patti</div>
+                                <div class="font-label-number-md text-label-number-md text-on-surface font-bold">147
+                                </div>
+                            </div>
+                            <div class="h-8 w-px bg-surface-variant"></div>
+                            <div class="text-right">
+                                <div class="font-label-caps text-[10px] uppercase text-outline">Single</div>
+                                <div class="font-label-number-md text-label-number-md text-primary font-extrabold">2
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between text-[11px] text-outline pt-space-xs">
+                            <span class="">Winner: Single 2</span>
+                            <span class="text-tertiary flex items-center gap-0.5"><span
+                                    class="material-symbols-outlined text-[12px]">verified</span> Verified</span>
+                        </div>
+                    </div>
+                    <!-- Baji 2: Declared -->
+                    <div
+                        class="relative overflow-hidden rounded-xl bg-surface-container-lowest p-space-md shadow-lg transition-all hover:-translate-y-1">
+                        <div class="flex items-center justify-between mb-space-sm">
+                            <span
+                                class="font-label-caps text-label-caps uppercase text-on-surface-variant font-bold">2nd
+                                Baji</span>
+                            <span
+                                class="px-2 py-0.5 rounded-full bg-tertiary/10 text-tertiary font-label-caps text-[10px] uppercase font-bold flex items-center gap-1">
+                                <span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Declared
+                            </span>
+                        </div>
+                        <div class="text-body-sm text-outline mb-space-xs font-label-number-md">12:00 PM IST</div>
+                        <div
+                            class="my-space-md flex items-center justify-between bg-surface-container-low p-space-sm rounded-lg">
+                            <div>
+                                <div class="font-label-caps text-[10px] uppercase text-outline">Patti</div>
+                                <div class="font-label-number-md text-label-number-md text-on-surface font-bold">389
+                                </div>
+                            </div>
+                            <div class="h-8 w-px bg-surface-variant"></div>
+                            <div class="text-right">
+                                <div class="font-label-caps text-[10px] uppercase text-outline">Single</div>
+                                <div class="font-label-number-md text-label-number-md text-primary font-extrabold">0
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between text-[11px] text-outline pt-space-xs">
+                            <span class="">Winner: Single 0</span>
+                            <span class="text-tertiary flex items-center gap-0.5"><span
+                                    class="material-symbols-outlined text-[12px]">verified</span> Verified</span>
+                        </div>
+                    </div>
+                    <!-- Baji 3: Declared -->
+                    <div
+                        class="relative overflow-hidden rounded-xl bg-surface-container-lowest p-space-md shadow-lg transition-all hover:-translate-y-1">
+                        <div class="flex items-center justify-between mb-space-sm">
+                            <span
+                                class="font-label-caps text-label-caps uppercase text-on-surface-variant font-bold">3rd
+                                Baji</span>
+                            <span
+                                class="px-2 py-0.5 rounded-full bg-tertiary/10 text-tertiary font-label-caps text-[10px] uppercase font-bold flex items-center gap-1">
+                                <span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Declared
+                            </span>
+                        </div>
+                        <div class="text-body-sm text-outline mb-space-xs font-label-number-md">01:30 PM IST</div>
+                        <div
+                            class="my-space-md flex items-center justify-between bg-surface-container-low p-space-sm rounded-lg">
+                            <div>
+                                <div class="font-label-caps text-[10px] uppercase text-outline">Patti</div>
+                                <div class="font-label-number-md text-label-number-md text-on-surface font-bold">246
+                                </div>
+                            </div>
+                            <div class="h-8 w-px bg-surface-variant"></div>
+                            <div class="text-right">
+                                <div class="font-label-caps text-[10px] uppercase text-outline">Single</div>
+                                <div class="font-label-number-md text-label-number-md text-primary font-extrabold">2
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between text-[11px] text-outline pt-space-xs">
+                            <span class="">Winner: Single 2</span>
+                            <span class="text-tertiary flex items-center gap-0.5"><span
+                                    class="material-symbols-outlined text-[12px]">verified</span> Verified</span>
+                        </div>
+                    </div>
+                    <!-- Baji 4: Declared (Hero Match) -->
+                    <div
+                        class="relative overflow-hidden rounded-xl bg-surface-container p-space-md shadow-xl transition-all hover:-translate-y-1 ring-1 ring-primary/30">
+                        <div class="flex items-center justify-between mb-space-sm">
+                            <span class="font-label-caps text-label-caps uppercase text-primary font-bold">4th
+                                Baji</span>
+                            <span
+                                class="px-2 py-0.5 rounded-full bg-primary-container text-on-primary-container font-label-caps text-[10px] uppercase font-bold flex items-center gap-1">
+                                <span class="material-symbols-outlined text-[12px]">star</span> Latest
+                            </span>
+                        </div>
+                        <div class="text-body-sm text-outline mb-space-xs font-label-number-md">03:00 PM IST</div>
+                        <div
+                            class="my-space-md flex items-center justify-between bg-surface-container-lowest p-space-sm rounded-lg">
+                            <div>
+                                <div class="font-label-caps text-[10px] uppercase text-outline">Patti</div>
+                                <div class="font-label-number-md text-label-number-md text-on-surface font-bold">579
+                                </div>
+                            </div>
+                            <div class="h-8 w-px bg-surface-variant"></div>
+                            <div class="text-right">
+                                <div class="font-label-caps text-[10px] uppercase text-outline">Single</div>
+                                <div class="font-label-number-md text-label-number-md text-primary font-extrabold">1
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between text-[11px] text-primary pt-space-xs">
+                            <span class="">Winner: Single 1</span>
+                            <span class="flex items-center gap-0.5"><span
+                                    class="material-symbols-outlined text-[12px]">check_circle</span> Live
+                                Confirmed</span>
+                        </div>
+                    </div>
+                    <!-- Baji 5: Live Countdown -->
+                    <div
+                        class="relative overflow-hidden rounded-xl bg-secondary-container/20 p-space-md shadow-xl transition-all ring-1 ring-primary/50">
+                        <div
+                            class="absolute -right-8 -top-8 w-24 h-24 rounded-full bg-primary/10 blur-xl pointer-events-none">
+                        </div>
+                        <div class="flex items-center justify-between mb-space-sm">
+                            <span class="font-label-caps text-label-caps uppercase text-primary font-bold">5th
+                                Baji</span>
+                            <span
+                                class="px-2 py-0.5 rounded-full bg-primary-container text-on-primary-container font-label-caps text-[10px] uppercase font-bold flex items-center gap-1 animate-pulse">
+                                <span class="w-1.5 h-1.5 rounded-full bg-on-primary-container"></span> Live Draw
+                            </span>
+                        </div>
+                        <div class="text-body-sm text-outline mb-space-xs font-label-number-md">04:30 PM IST</div>
+                        <div
+                            class="my-space-md flex flex-col items-center justify-center bg-surface-container-lowest p-space-sm rounded-lg text-center">
+                            <span class="font-label-caps text-[10px] uppercase text-primary tracking-wider">Awaiting
+                                Result In</span>
+                            <span class="font-label-number-md text-label-number-md text-primary font-bold mt-0.5">14m
+                                32s</span>
+                        </div>
+                        <div class="flex items-center justify-between text-[11px] text-on-surface-variant pt-space-xs">
+                            <span class="">Betting Closed</span>
+                            <span class="text-primary font-medium">Drawing Active</span>
+                        </div>
+                    </div>
+                    <!-- Baji 6: Upcoming -->
+                    <div
+                        class="relative overflow-hidden rounded-xl bg-surface-container-lowest/60 p-space-md shadow-md opacity-80 hover:opacity-100 transition-opacity">
+                        <div class="flex items-center justify-between mb-space-sm">
+                            <span
+                                class="font-label-caps text-label-caps uppercase text-on-surface-variant font-bold">6th
+                                Baji</span>
+                            <span
+                                class="px-2 py-0.5 rounded-full bg-surface-variant text-outline font-label-caps text-[10px] uppercase">
+                                Upcoming
+                            </span>
+                        </div>
+                        <div class="text-body-sm text-outline mb-space-xs font-label-number-md">06:00 PM IST</div>
+                        <div
+                            class="my-space-md flex items-center justify-center bg-surface-container-low p-space-sm rounded-lg text-outline font-label-number-md text-body-sm">
+                            • • • — •
+                        </div>
+                        <div class="flex items-center justify-between text-[11px] text-outline pt-space-xs">
+                            <span class="">Window Open</span>
+                            <span class="">Closes 05:55 PM</span>
+                        </div>
+                    </div>
+                    <!-- Baji 7: Upcoming -->
+                    <div
+                        class="relative overflow-hidden rounded-xl bg-surface-container-lowest/60 p-space-md shadow-md opacity-80 hover:opacity-100 transition-opacity">
+                        <div class="flex items-center justify-between mb-space-sm">
+                            <span
+                                class="font-label-caps text-label-caps uppercase text-on-surface-variant font-bold">7th
+                                Baji</span>
+                            <span
+                                class="px-2 py-0.5 rounded-full bg-surface-variant text-outline font-label-caps text-[10px] uppercase">
+                                Upcoming
+                            </span>
+                        </div>
+                        <div class="text-body-sm text-outline mb-space-xs font-label-number-md">07:30 PM IST</div>
+                        <div
+                            class="my-space-md flex items-center justify-center bg-surface-container-low p-space-sm rounded-lg text-outline font-label-number-md text-body-sm">
+                            • • • — •
+                        </div>
+                        <div class="flex items-center justify-between text-[11px] text-outline pt-space-xs">
+                            <span class="">Window Open</span>
+                            <span class="">Closes 07:25 PM</span>
+                        </div>
+                    </div>
+                    <!-- Baji 8: Upcoming -->
+                    <div
+                        class="relative overflow-hidden rounded-xl bg-surface-container-lowest/60 p-space-md shadow-md opacity-80 hover:opacity-100 transition-opacity">
+                        <div class="flex items-center justify-between mb-space-sm">
+                            <span
+                                class="font-label-caps text-label-caps uppercase text-on-surface-variant font-bold">8th
+                                Baji</span>
+                            <span
+                                class="px-2 py-0.5 rounded-full bg-surface-variant text-outline font-label-caps text-[10px] uppercase">
+                                Upcoming
+                            </span>
+                        </div>
+                        <div class="text-body-sm text-outline mb-space-xs font-label-number-md">09:00 PM IST</div>
+                        <div
+                            class="my-space-md flex items-center justify-center bg-surface-container-low p-space-sm rounded-lg text-outline font-label-number-md text-body-sm">
+                            • • • — •
+                        </div>
+                        <div class="flex items-center justify-between text-[11px] text-outline pt-space-xs">
+                            <span class="">Final Daily Round</span>
+                            <span class="">Closes 08:55 PM</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Dual Split Section: Timetable & Historical Archive Explorer -->
+            <section class="w-full mb-space-xl">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+                    <!-- Left (7 Cols): Game Timing Schedule & Daily Operation Rules -->
+                    <div
+                        class="lg:col-span-7 bg-surface-container rounded-xl p-space-lg shadow-xl flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-space-md">
+                                <div>
+                                    <span
+                                        class="font-label-caps text-label-caps uppercase tracking-wider text-primary">Schedule
+                                        Guidelines</span>
+                                    <h3 class="font-headline-md text-headline-md text-on-surface mt-1">Official Kolkata
+                                        Fatafat Daily Timetable</h3>
+                                </div>
+                                <div class="flex items-center gap-1 bg-surface-container-lowest px-2 py-1 rounded-lg">
+                                    <span class="material-symbols-outlined text-outline text-[16px]">schedule</span>
+                                    <span class="font-label-caps text-label-caps uppercase text-outline">IST
+                                        Timezone</span>
+                                </div>
+                            </div>
+                            <p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+                                All draws occur 7 days a week including Sundays &amp; Public Holidays. Betting lines
+                                freeze exactly 5 minutes before the public release timestamps.
+                            </p>
+                            <!-- Timetable Table Component -->
+                            <div class="overflow-x-auto">
+                                <table class="w-full text-left font-body-sm text-body-sm">
+                                    <thead>
+                                        <tr
+                                            class="bg-surface-container-lowest text-outline font-label-caps text-label-caps uppercase">
+                                            <th class="py-2.5 px-space-sm rounded-l-lg">Slot</th>
+                                            <th class="py-2.5 px-space-sm">Betting Close</th>
+                                            <th class="py-2.5 px-space-sm">Declaration</th>
+                                            <th class="py-2.5 px-space-sm text-right rounded-r-lg">Current Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-surface-variant/40 font-label-number-md">
+                                        <tr class="hover:bg-surface-container-high/40 transition-colors">
+                                            <td class="py-2 px-space-sm font-body-md text-on-surface font-semibold">1st
+                                                Baji</td>
+                                            <td class="py-2 px-space-sm text-on-surface-variant">10:25 AM</td>
+                                            <td class="py-2 px-space-sm text-primary font-bold">10:30 AM</td>
+                                            <td class="py-2 px-space-sm text-right"><span
+                                                    class="text-tertiary font-label-caps text-[10px] uppercase font-bold">Completed</span>
+                                            </td>
+                                        </tr>
+                                        <tr class="hover:bg-surface-container-high/40 transition-colors">
+                                            <td class="py-2 px-space-sm font-body-md text-on-surface font-semibold">2nd
+                                                Baji</td>
+                                            <td class="py-2 px-space-sm text-on-surface-variant">11:55 AM</td>
+                                            <td class="py-2 px-space-sm text-primary font-bold">12:00 PM</td>
+                                            <td class="py-2 px-space-sm text-right"><span
+                                                    class="text-tertiary font-label-caps text-[10px] uppercase font-bold">Completed</span>
+                                            </td>
+                                        </tr>
+                                        <tr class="hover:bg-surface-container-high/40 transition-colors">
+                                            <td class="py-2 px-space-sm font-body-md text-on-surface font-semibold">3rd
+                                                Baji</td>
+                                            <td class="py-2 px-space-sm text-on-surface-variant">01:25 PM</td>
+                                            <td class="py-2 px-space-sm text-primary font-bold">01:30 PM</td>
+                                            <td class="py-2 px-space-sm text-right"><span
+                                                    class="text-tertiary font-label-caps text-[10px] uppercase font-bold">Completed</span>
+                                            </td>
+                                        </tr>
+                                        <tr class="hover:bg-surface-container-high/40 transition-colors">
+                                            <td class="py-2 px-space-sm font-body-md text-on-surface font-semibold">4th
+                                                Baji</td>
+                                            <td class="py-2 px-space-sm text-on-surface-variant">02:55 PM</td>
+                                            <td class="py-2 px-space-sm text-primary font-bold">03:00 PM</td>
+                                            <td class="py-2 px-space-sm text-right"><span
+                                                    class="text-tertiary font-label-caps text-[10px] uppercase font-bold">Completed</span>
+                                            </td>
+                                        </tr>
+                                        <tr class="bg-primary-container/10">
+                                            <td class="py-2 px-space-sm font-body-md text-primary font-bold">5th Baji
+                                            </td>
+                                            <td class="py-2 px-space-sm text-primary-fixed">04:25 PM</td>
+                                            <td class="py-2 px-space-sm text-primary font-bold">04:30 PM</td>
+                                            <td class="py-2 px-space-sm text-right"><span
+                                                    class="text-primary font-label-caps text-[10px] uppercase font-bold animate-pulse">Running
+                                                    Now</span></td>
+                                        </tr>
+                                        <tr class="hover:bg-surface-container-high/40 transition-colors">
+                                            <td class="py-2 px-space-sm font-body-md text-on-surface font-semibold">6th
+                                                Baji</td>
+                                            <td class="py-2 px-space-sm text-on-surface-variant">05:55 PM</td>
+                                            <td class="py-2 px-space-sm text-on-surface">06:00 PM</td>
+                                            <td class="py-2 px-space-sm text-right"><span
+                                                    class="text-outline font-label-caps text-[10px] uppercase">Upcoming</span>
+                                            </td>
+                                        </tr>
+                                        <tr class="hover:bg-surface-container-high/40 transition-colors">
+                                            <td class="py-2 px-space-sm font-body-md text-on-surface font-semibold">7th
+                                                Baji</td>
+                                            <td class="py-2 px-space-sm text-on-surface-variant">07:25 PM</td>
+                                            <td class="py-2 px-space-sm text-on-surface">07:30 PM</td>
+                                            <td class="py-2 px-space-sm text-right"><span
+                                                    class="text-outline font-label-caps text-[10px] uppercase">Upcoming</span>
+                                            </td>
+                                        </tr>
+                                        <tr class="hover:bg-surface-container-high/40 transition-colors">
+                                            <td class="py-2 px-space-sm font-body-md text-on-surface font-semibold">8th
+                                                Baji</td>
+                                            <td class="py-2 px-space-sm text-on-surface-variant">08:55 PM</td>
+                                            <td class="py-2 px-space-sm text-on-surface">09:00 PM</td>
+                                            <td class="py-2 px-space-sm text-right"><span
+                                                    class="text-outline font-label-caps text-[10px] uppercase">Upcoming</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div
+                            class="mt-space-md pt-space-sm flex items-center justify-between text-body-sm text-outline">
+                            <span class="">* Sunday timings remain identical across all 8 baji cycles.</span>
+                            <button
+                                class="text-primary hover:underline flex items-center gap-1 font-label-caps text-label-caps uppercase"
+                                type="button">
+                                <span class="material-symbols-outlined text-[14px]">download</span> PDF Schedule
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Right (5 Cols): Archive Explorer & Quick Action Hub -->
+                    <div class="lg:col-span-5 flex flex-col gap-space-md">
+                        <!-- Date-Wise Archive Navigator -->
+                        <div class="bg-surface-container-low rounded-xl p-space-md shadow-lg">
+                            <div class="flex items-center justify-between mb-space-sm">
+                                <h4 class="font-headline-md text-body-lg font-bold text-on-surface">Historical Archives
+                                </h4>
+                                <span class="font-label-caps text-label-caps text-outline uppercase">30-Day Index</span>
+                            </div>
+                            <p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">Inspect previous
+                                verified results, patti frequency charts, and daily winners.</p>
+                            <!-- Calendar Chips Grid -->
+                            <div class="grid grid-cols-4 gap-1.5 mb-space-sm">
+                                <button
+                                    class="p-2 rounded bg-surface-container-high hover:bg-primary hover:text-on-primary text-center font-label-number-md text-body-sm transition-colors">
+                                    <span class="block text-[10px] font-label-caps text-outline">Wed</span>14 May
+                                </button>
+                                <button
+                                    class="p-2 rounded bg-surface-container-high hover:bg-primary hover:text-on-primary text-center font-label-number-md text-body-sm transition-colors">
+                                    <span class="block text-[10px] font-label-caps text-outline">Tue</span>13 May
+                                </button>
+                                <button
+                                    class="p-2 rounded bg-surface-container-high hover:bg-primary hover:text-on-primary text-center font-label-number-md text-body-sm transition-colors">
+                                    <span class="block text-[10px] font-label-caps text-outline">Mon</span>12 May
+                                </button>
+                                <button
+                                    class="p-2 rounded bg-surface-container-high hover:bg-primary hover:text-on-primary text-center font-label-number-md text-body-sm transition-colors">
+                                    <span class="block text-[10px] font-label-caps text-outline">Sun</span>11 May
+                                </button>
+                                <button
+                                    class="p-2 rounded bg-surface-container-high hover:bg-primary hover:text-on-primary text-center font-label-number-md text-body-sm transition-colors">
+                                    <span class="block text-[10px] font-label-caps text-outline">Sat</span>10 May
+                                </button>
+                                <button
+                                    class="p-2 rounded bg-surface-container-high hover:bg-primary hover:text-on-primary text-center font-label-number-md text-body-sm transition-colors">
+                                    <span class="block text-[10px] font-label-caps text-outline">Fri</span>09 May
+                                </button>
+                                <button
+                                    class="p-2 rounded bg-surface-container-high hover:bg-primary hover:text-on-primary text-center font-label-number-md text-body-sm transition-colors">
+                                    <span class="block text-[10px] font-label-caps text-outline">Thu</span>08 May
+                                </button>
+                                <button
+                                    class="p-2 rounded bg-surface-variant hover:bg-primary hover:text-on-primary text-center font-label-number-md text-body-sm transition-colors text-primary font-bold">
+                                    More →
+                                </button>
+                            </div>
+                            <div class="flex gap-2">
+                                <button
+                                    class="flex-1 py-2 rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-caps text-label-caps uppercase flex items-center justify-center gap-1.5 transition-colors"
+                                    type="button">
+                                    <span class="material-symbols-outlined text-[16px]">print</span>
+                                    Print Daily Chart
+                                </button>
+                                <button
+                                    class="flex-1 py-2 rounded-lg bg-primary-container text-on-primary-container hover:bg-primary font-label-caps text-label-caps uppercase flex items-center justify-center gap-1.5 font-bold transition-colors"
+                                    type="button">
+                                    <span class="material-symbols-outlined text-[16px]">table_view</span>
+                                    Full Patti Matrix
+                                </button>
+                            </div>
+                        </div>
+                        <!-- High-Impact Admin Link Banner -->
+
+                        <!-- Analytical Hot Numbers Visual Widget (SVG Sparkline) -->
+                        <div class="bg-surface-container-lowest rounded-xl p-space-md shadow-lg">
+                            <div class="flex items-center justify-between mb-space-xs">
+                                <span class="font-label-caps text-label-caps uppercase text-primary font-bold">Today's
+                                    Hot Patti Numbers</span>
+                                <span class="font-label-number-md text-body-sm text-tertiary">Frequency Index</span>
+                            </div>
+                            <div class="flex items-center gap-3 my-2">
+                                <!-- Inline Mini Bar Chart -->
+                                <div class="flex-1 h-10 flex items-end gap-1.5 bg-surface-container-low p-1 rounded">
+                                    <div class="bg-primary/40 hover:bg-primary transition-all w-1/8 h-4 rounded-xs"
+                                        title="Digit 0: 4 times"></div>
+                                    <div class="bg-primary/60 hover:bg-primary transition-all w-1/8 h-7 rounded-xs"
+                                        title="Digit 1: 7 times"></div>
+                                    <div class="bg-primary hover:bg-primary-fixed transition-all w-1/8 h-9 rounded-xs"
+                                        title="Digit 2: 9 times (High)"></div>
+                                    <div class="bg-primary/50 hover:bg-primary transition-all w-1/8 h-5 rounded-xs"
+                                        title="Digit 3: 5 times"></div>
+                                    <div class="bg-primary/30 hover:bg-primary transition-all w-1/8 h-3 rounded-xs"
+                                        title="Digit 4: 3 times"></div>
+                                    <div class="bg-primary/70 hover:bg-primary transition-all w-1/8 h-8 rounded-xs"
+                                        title="Digit 5: 8 times"></div>
+                                    <div class="bg-primary/40 hover:bg-primary transition-all w-1/8 h-4 rounded-xs"
+                                        title="Digit 6: 4 times"></div>
+                                    <div class="bg-primary/80 hover:bg-primary transition-all w-1/8 h-8 rounded-xs"
+                                        title="Digit 7: 8 times"></div>
+                                </div>
+                                <div class="text-right">
+                                    <div class="font-label-number-md text-headline-md text-primary font-bold">#2, #1
+                                    </div>
+                                    <div class="font-body-sm text-[11px] text-outline">Dominant Singlet</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Visual Editorial & Trust Guarantee Section -->
+            <section class="w-full mb-space-lg">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+                    <div
+                        class="relative overflow-hidden rounded-xl bg-surface-container-low p-space-md shadow-md flex items-start gap-space-sm">
+                        <div
+                            class="w-10 h-10 rounded-lg bg-surface-variant flex items-center justify-center text-primary shrink-0">
+                            <span class="material-symbols-outlined text-[24px]">bolt</span>
+                        </div>
+                        <div>
+                            <h4 class="font-headline-md text-body-lg font-bold text-on-surface">Sub-Second Delivery</h4>
+                            <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Live results are scraped
+                                directly from public declarations with ultra-low latency push pipelines.</p>
+                        </div>
+                    </div>
+                    <div
+                        class="relative overflow-hidden rounded-xl bg-surface-container-low p-space-md shadow-md flex items-start gap-space-sm">
+                        <div
+                            class="w-10 h-10 rounded-lg bg-surface-variant flex items-center justify-center text-tertiary shrink-0">
+                            <span class="material-symbols-outlined text-[24px]">verified_user</span>
+                        </div>
+                        <div>
+                            <h4 class="font-headline-md text-body-lg font-bold text-on-surface">100% Verified Patti</h4>
+                            <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Dual checksum algorithm
+                                validates Pana mathematics against official game log transcripts.</p>
+                        </div>
+                    </div>
+                    <div
+                        class="relative overflow-hidden rounded-xl bg-surface-container-low p-space-md shadow-md flex items-start gap-space-sm">
+                        <div
+                            class="w-10 h-10 rounded-lg bg-surface-variant flex items-center justify-center text-secondary shrink-0">
+                            <span class="material-symbols-outlined text-[24px]">history_edu</span>
+                        </div>
+                        <div>
+                            <h4 class="font-headline-md text-body-lg font-bold text-on-surface">Unbroken Records</h4>
+                            <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Access over 5 years of
+                                daily Kolkata Fatafat game scorecards without registration hurdles.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Interactive JavaScript: Live Countdown & Auto-Refresh Emulation -->
+            <script>
+                    (function () {
+                        // 5-Second Auto Refresh Circular Progress Bar
+                        let refreshSeconds = 5;
+                        const totalSeconds = 5;
+                        const ring = document.getElementById('refreshRing');
+                        const textSec = document.getElementById('countdownSec');
+                        const tickerNum = document.getElementById('tickerNum');
+                        const syncBtn = document.getElementById('manualSyncBtn');
+                        const syncIcon = document.getElementById('syncIcon');
+                        const circumference = 2 * Math.PI * 20; // 125.66
+
+                        function resetRefreshTimer() {
+                            refreshSeconds = 5;
+                            if (textSec) textSec.innerText = '5s';
+                            if (tickerNum) tickerNum.innerText = '5';
+                            if (ring) ring.style.strokeDashoffset = '0';
+                        }
+
+                        const refreshInterval = setInterval(function () {
+                            refreshSeconds--;
+                            if (refreshSeconds < 0) {
+                                // Trigger visual flash refresh
+                                if (syncIcon) syncIcon.classList.add('animate-spin');
+                                setTimeout(function () {
+                                    if (syncIcon) syncIcon.classList.remove('animate-spin');
+                                }, 800);
+                                resetRefreshTimer();
+                            } else {
+                                if (textSec) textSec.innerText = refreshSeconds + 's';
+                                if (tickerNum) tickerNum.innerText = refreshSeconds;
+                                if (ring) {
+                                    const offset = circumference - (refreshSeconds / totalSeconds) * circumference;
+                                    ring.style.strokeDashoffset = offset;
+                                }
+                            }
+                        }, 1000);
+
+                        if (syncBtn) {
+                            syncBtn.addEventListener('click', function () {
+                                if (syncIcon) syncIcon.classList.add('animate-spin');
+                                setTimeout(function () {
+                                    if (syncIcon) syncIcon.classList.remove('animate-spin');
+                                    resetRefreshTimer();
+                                }, 600);
+                            });
+                        }
+
+                        // Next Baji Timer Countdown Simulation
+                        let bajiMin = 14;
+                        let bajiSec = 32;
+                        const minEl = document.getElementById('timerMin');
+                        const secEl = document.getElementById('timerSec');
+
+                        setInterval(function () {
+                            if (bajiSec > 0) {
+                                bajiSec--;
+                            } else {
+                                if (bajiMin > 0) {
+                                    bajiMin--;
+                                    bajiSec = 59;
+                                } else {
+                                    bajiMin = 0;
+                                    bajiSec = 0;
+                                }
+                            }
+                            if (minEl) minEl.innerText = bajiMin < 10 ? '0' + bajiMin : bajiMin;
+                            if (secEl) secEl.innerText = bajiSec < 10 ? '0' + bajiSec : bajiSec;
+                        }, 1000);
+                    })();
+            </script>
+        </div>
+    </main>
+    <footer class="w-full bg-surface-container-lowest mt-space-xl py-space-xl">
+        <div class="max-w-[1200px] mx-auto px-gutter-mobile md:px-margin">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-space-lg mb-space-lg">
+                <div class="space-y-space-xs">
+                    <div class="flex items-center gap-space-xs mb-space-sm"><span
+                            class="font-headline-md text-headline-md text-primary">New Kolkata Fatafat</span></div>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant">Premier real-time results and analytics
+                        network for Kolkata Fatafat game rounds with zero-latency result stream.</p>
+                </div>
+                <div>
+                    <h4 class="font-label-caps text-label-caps text-primary uppercase mb-space-sm">Round Timings</h4>
+                    <ul class="font-body-sm text-body-sm text-on-surface-variant space-y-1">
+                        <li class="">1st Baji: 10:30 AM</li>
+                        <li class="">2nd Baji: 12:00 PM</li>
+                        <li class="">3rd Baji: 01:30 PM</li>
+                        <li class="">4th Baji: 03:00 PM</li>
+                        <li class="">5th Baji: 04:30 PM</li>
+                        <li class="">6th Baji: 06:00 PM</li>
+                        <li class="">7th Baji: 07:30 PM</li>
+                        <li class="">8th Baji: 09:00 PM</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-label-caps text-label-caps text-primary uppercase mb-space-sm">Quick Navigation</h4>
+                    <ul class="font-body-sm text-body-sm text-on-surface-variant space-y-1.5">
+                        <li class=""><a class="hover:text-primary transition-colors" data-path="today-live-games"
+                                href="#">Live Baji Status</a></li>
+                        <li class=""><a class="hover:text-primary transition-colors" data-path="baji-results-chart"
+                                href="#">Patti Breakdown Chart</a></li>
+                        <li class=""><a class="hover:text-primary transition-colors" data-path="game-timetable"
+                                href="#">Official Timetable</a></li>
+                        <li class=""><a class="hover:text-primary transition-colors" data-path="tips-patti-chart"
+                                href="#">Analysis &amp; Predictions</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-label-caps text-label-caps text-primary uppercase mb-space-sm">Notice &amp; Security
+                    </h4>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant mb-space-xs">Auto-synchronization active
+                        with instant server broadcast. Server nodes: Kolkata-East 1.</p><span
+                        class="inline-flex items-center gap-1 text-tertiary font-label-caps text-label-caps"><span
+                            class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>Operational</span>
+                </div>
+            </div>
+            <div
+                class="pt-space-md border-t border-outline-variant/20 flex flex-col md:flex-row items-center justify-between gap-space-sm text-center md:text-left">
+                <p class="font-body-sm text-body-sm text-on-surface-variant">Disclaimer: This platform is designed
+                    solely for entertainment and informational reference. All data is synchronized from public game
+                    declarations.</p>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">© 2024 New Kolkata Fatafat. All rights
+                    reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
